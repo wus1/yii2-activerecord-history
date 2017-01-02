@@ -115,6 +115,7 @@ class History extends Behavior
                     'event' => HistoryEntity::EVENT_INSERT,
                     'createdAt' => $createdAt,
                     'createdBy' => $createdBy,
+                    'initAttributes' => json_encode($event->sender->attributes)
                 ]);
                 $storage->add($model);
                 break;
