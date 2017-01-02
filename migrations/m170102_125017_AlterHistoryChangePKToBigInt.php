@@ -4,7 +4,7 @@ use yii\db\Schema;
 use yii\db\Migration;
 use bupy7\activerecord\history\Module;
 
-class m170102_114524_AlterHistoryAddInitAttributes extends Migration
+class m170102_125017_AlterHistoryChangePKToBigInt extends Migration
 {
     protected $tableName;
 
@@ -16,13 +16,12 @@ class m170102_114524_AlterHistoryAddInitAttributes extends Migration
 
     public function up()
     {
-        $tableOptions = null;
-        $this->addColumn($this->tableName, 'initAttributes', ' LONGTEXT DEFAULT NULL');
+        $this->alterColumn($this->tableName, 'id', ' BIGINT UNSIGNED NOT NULL AUTO_INCREMENT');
     }
 
     public function down()
     {
-        $this->dropColumn($this->tableName, 'initAttributes');
+        $this->alterColumn($this->tableName, 'id', ' INT NOT NULL AUTO_INCREMENT');
     }
 
     /*
