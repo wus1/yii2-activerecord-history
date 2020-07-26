@@ -61,6 +61,7 @@ class Database extends BaseStorage
                 'event' => $collection[$i]->event,
                 'created_at' => $collection[$i]->createdAt,
                 'created_by' => $collection[$i]->createdBy,
+                'ip' => $collection[$i]->ip,
                 'initAttributes' => $collection[$i]->initAttributes,
             ];
             $sql[] = $queryBuilder->insert($this->module->tableName, $row, $params);

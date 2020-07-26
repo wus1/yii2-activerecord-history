@@ -15,7 +15,7 @@ class m170717_204646_repairCharset extends Migration
 
     public function up()
     {
-        $this->execute('ALTER TABLE ' . $this->tableName . ' CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;');
+        $this->execute('ALTER TABLE ' . $this->tableName . ' CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;');
     }
 
     public function down()

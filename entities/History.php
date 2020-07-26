@@ -57,6 +57,8 @@ class History extends BaseObject
      * @var integer Id of user which created or updated field.
      */
     public $createdBy;
+
+    public $ip;
     /**
      * @var string initial attributes (json encoded) as array of attrName=>attrValue of history to the AR object.
      */
