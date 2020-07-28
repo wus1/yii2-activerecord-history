@@ -6,7 +6,7 @@ use bupy7\activerecord\history\Module;
 /**
  * Class m200726_112403_addIp
  */
-class m200726_112403_addIp extends Migration
+class m160102_154311_addIp extends Migration
 {
     protected $tableName;
 
